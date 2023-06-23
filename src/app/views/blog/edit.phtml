@@ -1,0 +1,62 @@
+<body>
+    <?php
+    require_once APP_PATH.'/views/header.phtml'
+    ?>
+
+    <!--Main Navigation-->
+
+    <!--Main layout-->
+    <main class="my-5">
+        <div class="container">
+            <!--Section: Content-->
+            <section class="text-center">
+                <h4 class="mb-5 p-4"><strong>Your's Book</strong></h4>
+                <form action='/blog/update?id=<?php echo $data['_id'] ?>' method="POST">
+                    <div class="row my-4">
+                        <div class="col-md-3 col-sm-12">
+                            <label for="title">Title:
+                                <input type="text" name="title" id="title"
+                                value="<?php echo $data["title"] ?>">
+                            </label>
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                            <label for="data">Price:
+                                <input type="number" name="data" id="data"
+                                value="<?php echo $data["data"] ?>">
+                            </label>
+                        </div>
+                        <div class="col-md-4 col-sm-8">
+                            <label for="image">Image:
+                                <input type="text" name="image" id="image"
+                                value="<?php echo $data["image"] ?>">
+                            </label>
+                        </div>
+                        <div class="col-md-1 col-sm-4">
+                            <input type="submit" class="btn btn-success" value="Update">
+                        </div>
+                    </div>
+                </form>
+                <?php
+                    if ($_GET['msg'] == "fill_all") {
+                        echo "<p class='text-center' style='color: red;' id='error'><b>Fill All Input</b></p>";
+                    }
+                ?>
+
+            </section>
+            <!--Section: Content-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <!--Footer-->
+    <footer class="bg-light text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="">Reselling.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--Footer-->
+</body>
