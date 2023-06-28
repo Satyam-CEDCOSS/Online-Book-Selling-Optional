@@ -2,10 +2,8 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand" href="#!"><b>Books</b></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-              aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <span class="navbar-brand"><b>Books</b></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link" href="/admin">Home</a></li>
@@ -25,8 +23,8 @@
     <header class="bg-dark py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Books Panel</h1>
-                <p class="lead fw-normal text-white-50 mb-0">Books Manage Here</p>
+                <h1 class="display-4 fw-bolder">Admin Panel</h1>
+                <p class="lead fw-normal text-white-50 mb-0">Users Manage Here</p>
             </div>
         </div>
     </header>
@@ -34,12 +32,21 @@
     <section class="py-5">
         <div class="section__box"
          style="display: flex;flex-direction:column;justify-content:center;text-align: center;">
-            <h1 class="m-3">All Books</h1>
-        </div>
-        <div class="row">
-            <?php
-            echo $blog
-            ?>
+            <h1 class="m-3">All Users</h1>
+
+            <table class="table">
+                <caption>User Table</caption>
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Type</th>
+                </thead>
+                <tbody>
+                    <?php
+                    echo $blog;
+                    ?>
+                </tbody>
+            </table>
         </div>
     </section>
     <!-- Footer-->
